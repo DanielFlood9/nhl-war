@@ -1,3 +1,5 @@
+"use client"
+
 const PLAYERS = [
   { rank:1,  name:"Mitch Marner",      team:"VGK", pos:"R", war:2.28, gar:13.68, g:7,  a:14, pts:21, gp:13 },
   { rank:2,  name:"Jack Eichel",       team:"VGK", pos:"C", war:2.12, gar:12.72, g:5,  a:16, pts:21, gp:13 },
