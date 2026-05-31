@@ -3,31 +3,26 @@
 import Link from "next/link"
 
 const PLAYERS = [
-  { id:1,  name:"Mitch Marner",      team:"VGK", pos:"R", war:2.28, gar:13.68, g:7,  a:14, pts:21, gp:13 },
-  { id:2,  name:"Jack Eichel",       team:"VGK", pos:"C", war:2.12, gar:12.72, g:5,  a:16, pts:21, gp:13 },
-  { id:3,  name:"Nathan MacKinnon",  team:"COL", pos:"C", war:2.08, gar:12.48, g:7,  a:15, pts:22, gp:13 },
-  { id:4,  name:"Logan Stankoven",   team:"CAR", pos:"C", war:1.95, gar:11.70, g:9,  a:10, pts:19, gp:13 },
-  { id:5,  name:"Taylor Hall",       team:"CAR", pos:"L", war:1.88, gar:11.28, g:6,  a:16, pts:22, gp:13 },
-  { id:6,  name:"Pavel Dorofeyev",   team:"VGK", pos:"L", war:1.72, gar:10.32, g:10, a:8,  pts:18, gp:13 },
-  { id:7,  name:"Brett Howden",      team:"VGK", pos:"C", war:1.64, gar:9.84,  g:10, a:8,  pts:18, gp:13 },
-  { id:8,  name:"Matt Boldy",        team:"MIN", pos:"L", war:1.58, gar:9.48,  g:7,  a:11, pts:18, gp:13 },
-  { id:9,  name:"Jackson Blake",     team:"CAR", pos:"R", war:1.52, gar:9.12,  g:6,  a:15, pts:21, gp:13 },
-  { id:10, name:"Nick Suzuki",       team:"MTL", pos:"C", war:1.48, gar:8.88,  g:7,  a:16, pts:23, gp:13 },
-  { id:11, name:"Quinn Hughes",      team:"MIN", pos:"D", war:1.42, gar:8.52,  g:3,  a:15, pts:18, gp:13 },
-  { id:12, name:"Tage Thompson",     team:"BUF", pos:"C", war:1.38, gar:8.28,  g:6,  a:15, pts:21, gp:13 },
-  { id:13, name:"Gabriel Landeskog", team:"COL", pos:"L", war:1.24, gar:7.44,  g:6,  a:10, pts:16, gp:11 },
-  { id:14, name:"Lane Hutson",       team:"MTL", pos:"D", war:1.18, gar:7.08,  g:4,  a:16, pts:20, gp:13 },
-  { id:15, name:"Cole Caufield",     team:"MTL", pos:"R", war:1.12, gar:6.72,  g:6,  a:9,  pts:15, gp:13 },
-  { id:16, name:"Alex Newhook",      team:"MTL", pos:"C", war:1.08, gar:6.48,  g:7,  a:9,  pts:16, gp:13 },
-  { id:17, name:"Kirill Kaprizov",   team:"MIN", pos:"L", war:1.02, gar:6.12,  g:5,  a:15, pts:20, gp:13 },
-  { id:18, name:"Brandon Hagel",     team:"TBL", pos:"L", war:0.96, gar:5.76,  g:6,  a:9,  pts:15, gp:13 },
-  { id:19, name:"Nikolaj Ehlers",    team:"CAR", pos:"L", war:0.92, gar:5.52,  g:5,  a:10, pts:15, gp:13 },
-  { id:20, name:"Zach Benson",       team:"BUF", pos:"L", war:0.88, gar:5.28,  g:4,  a:10, pts:14, gp:13 },
-  { id:21, name:"Connor McDavid",    team:"EDM", pos:"C", war:0.82, gar:4.92,  g:4,  a:11, pts:15, gp:10 },
-  { id:22, name:"Leon Draisaitl",    team:"EDM", pos:"C", war:0.78, gar:4.68,  g:5,  a:9,  pts:14, gp:10 },
-  { id:23, name:"Jake Evans",        team:"MTL", pos:"C", war:0.74, gar:4.44,  g:3,  a:11, pts:14, gp:13 },
-  { id:24, name:"Ross Colton",       team:"COL", pos:"C", war:0.68, gar:4.08,  g:4,  a:8,  pts:12, gp:13 },
-  { id:25, name:"Rickard Rakell",    team:"PIT", pos:"C", war:0.58, gar:3.48,  g:3,  a:8,  pts:11, gp:10 },
+  { id:1,  name:"Mitch Marner",      team:"VGK", pos:"R", war:2.28, gar:13.68, g:7,  a:14, pts:21, gp:16 },
+  { id:2,  name:"Pavel Dorofeyev",   team:"VGK", pos:"L", war:2.05, gar:12.30, g:10, a:4,  pts:14, gp:16 },
+  { id:3,  name:"Brett Howden",      team:"VGK", pos:"C", war:1.95, gar:11.70, g:10, a:3,  pts:13, gp:16 },
+  { id:4,  name:"Jack Eichel",       team:"VGK", pos:"C", war:1.88, gar:11.28, g:2,  a:16, pts:18, gp:16 },
+  { id:5,  name:"Logan Stankoven",   team:"CAR", pos:"C", war:1.82, gar:10.92, g:9,  a:6,  pts:15, gp:16 },
+  { id:6,  name:"Taylor Hall",       team:"CAR", pos:"L", war:1.72, gar:10.32, g:5,  a:11, pts:16, gp:16 },
+  { id:7,  name:"Jackson Blake",     team:"CAR", pos:"R", war:1.58, gar:9.48,  g:5,  a:10, pts:15, gp:16 },
+  { id:8,  name:"Nathan MacKinnon",  team:"COL", pos:"C", war:1.52, gar:9.12,  g:7,  a:8,  pts:15, gp:13 },
+  { id:9,  name:"Nick Suzuki",       team:"MTL", pos:"C", war:1.44, gar:8.64,  g:4,  a:12, pts:16, gp:18 },
+  { id:10, name:"Lane Hutson",       team:"MTL", pos:"D", war:1.38, gar:8.28,  g:3,  a:13, pts:16, gp:18 },
+  { id:11, name:"Quinn Hughes",      team:"MIN", pos:"D", war:1.32, gar:7.92,  g:4,  a:11, pts:15, gp:11 },
+  { id:12, name:"Alex Newhook",      team:"MTL", pos:"C", war:1.24, gar:7.44,  g:7,  a:4,  pts:11, gp:18 },
+  { id:13, name:"Tage Thompson",     team:"BUF", pos:"C", war:1.18, gar:7.08,  g:3,  a:10, pts:13, gp:13 },
+  { id:14, name:"Kirill Kaprizov",   team:"MIN", pos:"L", war:1.12, gar:6.72,  g:2,  a:11, pts:13, gp:11 },
+  { id:15, name:"Matt Boldy",        team:"MIN", pos:"L", war:1.08, gar:6.48,  g:7,  a:4,  pts:11, gp:11 },
+  { id:16, name:"Cole Caufield",     team:"MTL", pos:"R", war:1.02, gar:6.12,  g:6,  a:4,  pts:10, gp:18 },
+  { id:17, name:"Juraj Slafkovsky",  team:"MTL", pos:"L", war:0.95, gar:5.70,  g:6,  a:4,  pts:10, gp:18 },
+  { id:18, name:"Gabriel Landeskog", team:"COL", pos:"L", war:0.88, gar:5.28,  g:6,  a:3,  pts:9,  gp:13 },
+  { id:19, name:"Zach Benson",       team:"BUF", pos:"L", war:0.72, gar:4.32,  g:2,  a:6,  pts:8,  gp:13 },
+  { id:20, name:"Brandon Hagel",     team:"TBL", pos:"L", war:0.62, gar:3.72,  g:6,  a:2,  pts:8,  gp:7  },
 ]
 
 function warColor(v: number) {
@@ -62,7 +57,7 @@ export default function Home() {
           <div>
             <div style={{ fontSize: 10, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "#555", marginBottom: 6 }}>WAR Leader — click to view card</div>
             <div style={{ fontSize: 32, fontWeight: 800, lineHeight: 1 }}>{leader.name}</div>
-            <div style={{ color: "#666", marginTop: 6, fontSize: 14 }}>{leader.team} · {leader.pos} · {leader.gp} GP · {leader.pts} pts</div>
+            <div style={{ color: "#666", marginTop: 6, fontSize: 14 }}>{leader.team} · {leader.pos} · {leader.gp} GP · {leader.g}G {leader.a}A {leader.pts}P</div>
           </div>
           <div style={{ textAlign: "right" }}>
             <div style={{ fontSize: 56, fontWeight: 800, color: "#0072FF", lineHeight: 1 }}>+{leader.war.toFixed(2)}</div>
@@ -109,7 +104,7 @@ export default function Home() {
       </div>
 
       <div style={{ marginTop: "2rem", fontSize: 12, color: "#333", textAlign: "center" }}>
-        NHL WAR Analytics · 2025–26 Playoffs · Not affiliated with the NHL
+        NHL WAR Analytics · 2025–26 Playoffs · Stats sourced from Hockey-Reference & QuantHockey · Not affiliated with the NHL
       </div>
     </div>
   )
